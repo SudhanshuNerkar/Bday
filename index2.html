@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <meta name="description" content="A special birthday webpage with messages, gallery, timeline, and more.">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto+Serif:wght@100&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        /* Section 1 (Split Layout) */
+        #section1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            text-align: left;
+            position: relative;
+        }
+
+        /* Blurred background */
+        #section1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('photos/IMG_3058.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        /* Content Layout */
+        .section1-content {
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .section1-left, .section1-right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Text Styling */
+        .section1-left h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .section1-right p {
+            font-size: 2.0em;
+            font-style: italic;
+        }
+
+        /* Section 2 - Timeline */
+        #section2 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('photos/bg2.jpeg');
+            padding: 40px 20px;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: auto;
+            padding-left: 20px;
+            border-left: 4px solid #ff6b81;
+        }
+
+        /* Messages Section */
+        #messages {
+            padding: 60px 20px;
+            background: rgba(255, 105, 180, 0.1);
+        }
+
+        #messages h2 {
+            font-size: 2em;
+        }
+
+        #messages p {
+            font-size: 1.8em;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .carousel-item p {
+            margin: 10px 0;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 105, 180, 0.8);
+            border: none;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 105, 180, 0.8);
+            color: white;
+            padding: 20px;
+            font-size: 1.5em;
+            font-family: 'Roboto Serif', serif;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Split Content -->
+    <section id="section1">
+        <div class="section1-content">
+            <div class="section1-left">
+                <h1>On February 26, 2003, Earth got gifted a very special person....</h1>
+            </div>
+            <div class="section1-right">
+                <p style="background-color: rgba(255, 107, 129, 0.4);">"Happy Birthday Baby! Your kindness, warmth, and love light up the lives of everyone around you!"</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 2: Timeline -->
+    <section id="section2">
+        <div class="timeline">
+            <!-- Timeline Content goes here -->
+        </div>
+    </section>
+    
+    <!-- Section 3: Heartfelt Messages with Carousel -->
+    <section id="messages">
+        <h2>Heartfelt Wishes from Friends</h2>
+        <!-- Carousel Wrapper -->
+        <div class="carousel-container">
+            <!-- Carousel Items (Wishes from Friends) -->
+            <div class="carousel-slide">
+                <div class="carousel-item">
+                    <p>"Wishing you the happiest birthday, Rupal! You bring so much light and love to the world. 🎉"</p>
+                    <p>- Friend 1</p>
+                </div>
+                <div class="carousel-item">
+                    <p>"Happy Birthday to the most amazing person I know! 🎂 May this year bring you endless joy!"</p>
+                    <p>- Friend 2</p>
+                </div>
+                <div class="carousel-item">
+                    <p>"Another year, another reason to celebrate you! 💖 Have a fabulous day filled with love!"</p>
+                    <p>- Friend 3</p>
+                </div>
+                <div class="carousel-item">
+                    <p>"To my beautiful friend, happy birthday! Here's to more unforgettable memories and laughter. 🥳"</p>
+                    <p>- Friend 4</p>
+                </div>
+                <div class="carousel-item">
+                    <p>"Your kindness knows no bounds, Rupal. Have the best birthday ever! 🌸"</p>
+                    <p>- Friend 5</p>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel Controls -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        ❤️ With love, [Your Name] ❤️
+    </footer>
+
+    <!-- Script -->
+    <script>
+        let slideIndex = 0;
+
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.carousel-item');
+            slideIndex += step;
+
+            // Wrap around if we go past the first or last slide
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+
+            // Move carousel slide
+            document.querySelector('.carousel-slide').style.transform = `translateX(${-100 * slideIndex}%)`;
+        }
+
+        // Initial call to display first slide
+        moveSlide(0);
+    </script>
+
+</body>
+</html>
