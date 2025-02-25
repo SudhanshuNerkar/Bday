@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <meta name="description" content="A special birthday webpage with messages, gallery, timeline, and more.">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto+Serif:wght@100&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        /* Section 1 (Split Layout) */
+        #section1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            text-align: left;
+            position: relative;
+        }
+
+        /* Blurred background */
+        #section1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('photos/IMG_3058.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        /* Content Layout */
+        .section1-content {
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .section1-left, .section1-right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Text Styling */
+        .section1-left h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .section1-right p {
+            font-size: 2.0em;
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section1-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Section 2 - Timeline */
+        #section2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+#section2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('photos/collage.png');
+    filter: blur(8px);
+    filter: brightness(40%);
+    z-index: -1;
+}
+
+/* .timeline {
+    position: relative;
+    z-index: 1; /* Ensures the content stays above the blurred background*/
+    /* max-width: 800px;
+    margin: auto;
+    padding-left: 20px;
+    border-left: 4px solid #ff6b81;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}  */ 
+
+        .timeline {
+            max-width: 800px;
+            margin: auto;
+            padding-left: 20px;
+            border-left: 4px solid #ff6b81;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .timeline-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Split Content -->
+    <section id="section1">
+        <div class="section1-content">
+            <div class="section1-left">
+                <h1>On February 26, 2003, Earth got gifted a very special person....</h1>
+            </div>
+            <div class="section1-right">
+                <p style="background-color: rgba(255, 107, 129, 0.4);">"Happy Birthday Baby! Your kindness, warmth, and love light up the lives of everyone around you!"</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section 2: Timeline -->
+    <section id="section2">
+        <div class="timeline">
+            <h1 style="font-weight:1000;font-size: xx-large;color: #fff;">Our Best Memories</h1>
+            <div class="timeline-item">
+                <img src="photos/mem1.jpeg" alt="Baby">
+                <div>
+                    <h2>First Date!🪐</h2>
+                    <p>My world became brighter when you arrived!</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem2 (2).jpeg" alt="First Steps">
+                <div>
+                    <h2>Not so Horror 😂</h2>
+                    <p>Shaitan was so bad istg, first movie though!</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem3.jpeg" alt="Achievements">
+                <div>
+                    <h2>The Wrong Sunflower😭🌻</h2>
+                    <p>Im so dumb, sorry for that wrong flower :(</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem4.jpeg" alt="Achievements">
+                <div>
+                    <h2>The Only One in Uniform🎓</h2>
+                    <p>Yes kids we are from same college.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem5.jpeg" alt="Achievements">
+                <div>
+                    <h2>Thank You!🌟</h2>
+                    <p>Thank You for making this a special day for me.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem6.jpeg" alt="Achievements">
+                <div>
+                    <h2>Looked Good init?🖤</h2>
+                    <p>Black? Coincidence? Fate? God knows..</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem7.jpeg" alt="Achievements">
+                <div>
+                    <h2>Happy Holi!🎨</h2>
+                    <p>The only festival we got to celebrate together.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem8.jpeg" alt="Achievements">
+                <div>
+                    <h2>You + Me = 🍟 + 🍔</h2>
+                    <p>Ate a lot that day, no doubt the shape we both are in.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem9.jpeg" alt="Achievements">
+                <div>
+                    <h2>Not our wedding </h2>
+                    <p>A memory to remember forever! Us one day fs!</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem10.jpeg" alt="Achievements">
+                <div>
+                    <h2>You, Me & Simba🐶</h2>
+                    <p>Perfect Sun & I got the correct flower that day.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem11.jpeg" alt="Achievements">
+                <div>
+                    <h2>XOXO 😘</h2>
+                    <p>Need more of your hugs and kisses. Missing em :(</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem12.jpeg" alt="Achievements">
+                <div>
+                    <h2>Perfect Day! ♥️</h2>
+                    <p>Wish to spend more such days with you super soon!</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/mem12.1.jpg" alt="Achievements">
+                <div>
+                    <h2>Drunk Us🍹</h2>
+                    <p>Great cocktail, TBH I liked the drunk version of you! ;)</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/IMG_3058.jpg" alt="Achievements">
+                <div>
+                    <h2>Good Photos Day!📷</h2>
+                    <p>Tysm for this & fikar na karo assi jaldi aa rhe hai.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/IMG_3645.jpg" alt="Achievements">
+                <div>
+                    <h2>The Red Dress!❤️</h2>
+                    <p>That dress looked so good on you and loved our time.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/IMG_3748.jpg" alt="Achievements">
+                <div>
+                    <h2>I love you!🥺</h2>
+                    <p>Wish I could hug you more tightly and not let go off you.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/IMG_4008.jpg" alt="Achievements">
+                <div>
+                    <h2>Kaafi Pretty Us!💗</h2>
+                    <p>Your family feels mine, loved your outfts & Radhe Radhe!</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/3b162c3c-79d9-452b-897f-9ff740352171.jpg" alt="Achievements">
+                <div>
+                    <h2>Subhanallah!🤩</h2>
+                    <p>Sundar Sundar Sundar! Apratim! lucky me hehe.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="photos/157ff927-4502-44cb-8b31-b3423827ae33.jpg" alt="Achievements">
+                <div>
+                    <h2>My Birthday!🎉</h2>
+                    <p>Honestly my best birthday till date! Thank you so much</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Section 3: Heartfelt Messages with Carousel -->
+<section class="testimonials">
+    <h1 style="font-size:xx-large;text-align: center;">Heartfelt Messages💌</h1>
+    <p style="font-weight: 600;font-size: larger;text-align: center;">You are truly special Rupal, and today is a day to celebrate you! Here are few messages from your loved ones
+         for you, hope you like them
+    </p>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <div class="testimonial">
+          <p class="msg">"Happy 22nd babygirl! I love you beyond words. 
+            I can’t express well but thank u for being the way you are. Thank u for being  my bestest friend. 
+            I hope you know that every time I tell you I love you, I mean it with my entire soul and heart.  You are my soulmate . My literal soulmate. I love youuu😭 Even if we’ll be 4,865 miles I promise I’ll be always there for YOU. always and forever💋
+            "</p>
+          <h4 class="name">- Aditi</h4>
+        </div>
+        <div class="testimonial">
+          <p class="msg">"Happy Birthday Rupal ji 
+            Har saal ki tarah is saal bhi aapka janamdin mangalmay ho,
+            Aapki zindagi har din ek naye surprise jaisi ho, jisme sirf khushiyan aur safalta ho, aap jo bhi sapne dekho fatt se poore ho jaye yahi Dil se kaamna hai. 
+            Cake zyada khaana, tension kam lena
+            Sorry lena hi nahi,
+            Dher sara pyaar aur aapka janmdin ka utsav antahin ho. <br> Har Har Mahadev"</p>
+          <h4 class="name">- Pranay</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">"Happy Birthday to the most amazing sister in the world! Your kindness, strength, and love make every moment with you 
+                unforgettable. May this year bring you endless joy, laughter, and all the happiness your heart can hold—because you deserve nothing less."</p>
+            <h4 class="name">- Shlok</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">"Hey, happy birthday, Rups. Ab tu bhi Buddhi ho gayi😂😂 , hope you have a great dayyyy, Kam Nashe karna jara 😮‍💨🤣"</p>
+            <h4 class="name">- Ketan</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">"Rupalzzz, you stood by me when I felt alone, lifted me when I was down, and believed in me when I doubted myself. You are truly special, and I’m beyond grateful to have you in my life. Happy Birthday!✨
+                "</p>
+            <h4 class="name">- Yash</h4>
+          </div>
+        <div class="testimonial">
+          <p class="msg">“Rupal doesn’t need to do anything grand to make a difference. It’s just the little things she does, the way she gets you without you saying too much, the way she’s right there for her friends whenever you need. 
+            You can always count on her. She’s kind, real, a little bit of chaos in the best way, and honestly a beautiful person inside and out.
+            Touchwood 🧿”</p>
+          <h4 class="name">- Veer</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“Happy 22nd birthday Rupdii! 
+                Wishing you a year filled with love, happiness, and growth. Grateful for our friendship and all the memories we’ve made over the year. And to many more of those. Have an amazing day! Love ”</p>
+            <h4 class="name">- Omkar</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“Happiest Birthday Rupal 
+                I cherish every bit of joy and fun we’ve had together. Enjoy your day to the fullest.....”</p>
+            <h4 class="name">- Mallu</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“happy birthday to a total bliss,always and forever,i’ve got you.”</p>
+            <h4 class="name">- Sau Tai</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“birthday hugs and kisses to my comfort person, love you endlessly”</p>
+            <h4 class="name">- Muku</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“Rapunzel, sticking around by your side was by far one of the best decisions I’ve made. Thankyouu for always being all ears to my yapping, for being the best dance partner with whom i can be myself and vibe even in a lift, for being my RR ❤ . I’ll always loveee and pareshan youu. Happiest 22!”</p>
+            <h4 class="name">- Tisha</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“Happiest birthday ruppp🌻🌻♥️♥️🥳🥳 you are my sunflower girlyy💅🏻 iloveyouu alwayss….youu lookk superr pretty whenn smilingg… keep smiling alwayss<3”</p>
+            <h4 class="name">- Akshata</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“Wishing you a very Happy Birthday Rupal,<br>Mai insta band kar rha hu to whatsapp par text karna”</p>
+            <h4 class="name">- Anshul</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“Happy Birthday Cutuu♥
+                You are the most adorable girl I know.
+                I wish you all the happiness and success in the world, keep shining. 
+                God bless you betu♥”</p>
+            <h4 class="name">- Snehal didi</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“Wishing you a wonderful birthday RupaI !!hope your studies and career both soar to new levels of success and happiness and eagarly waiting to welcome you to the family🎉🎉🎉🎉”</p>
+            <h4 class="name">- Krishna Jiju</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“my best birthday wishes to the cutest and the sweetest girl!
+                you are a gem at heart🫶🏻🫶🏻
+                all love to youu❤❤”</p>
+            <h4 class="name">- Prachi tai</h4>
+        </div>
+        <div class="testimonial">
+            <p class="msg">“🎉🎉🎁🎁Happy BIRTHDAY 🎂🎂🎂🎂Vahini Just wanted to say that you’re an absolute gem💎, and my best friend is lucky to have you. Wishing you endless laughter, good vibes, and all the happiness in the world.”</p>
+            <h4 class="name">- Nilay</h4>
+        </div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+<style>
+  .testimonials {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 2%;
+    /* background-color: #ff6b81; */
+  }
+
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-slide {
+    display: flex;
+    width: 100%; /* Adjust width based on the number of slides */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .msg {
+    font-style: italic;
+    font-size:large;
+    text-align: center;
+  }
+  .name{
+    text-align: center;
+  }
+  .testimonial {
+    width: 300%;
+    flex: 0 0 100%;
+    padding: 20px;
+    display: grid;
+    box-sizing: border-box;
+    align-items: center;
+    place-items: center;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .prev { left: 0; }
+  .next { right: 0; }
+</style>
+
+<script>
+  let currentIndex = 0;
+  const totalTestimonials = document.querySelectorAll('.testimonial').length;
+  const carouselSlide = document.querySelector('.carousel-slide');
+
+  function showTestimonial(index) {
+    const offset = -(index * 100); // Move left instead of right
+    carouselSlide.style.transform = `translateX(${offset}%)`;
+  }
+
+  document.querySelector('.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? totalTestimonials - 1 : currentIndex - 1;
+    showTestimonial(currentIndex);
+  });
+
+  document.querySelector('.next').addEventListener('click', () => {
+    currentIndex = (currentIndex === totalTestimonials - 1) ? 0 : currentIndex + 1;
+    showTestimonial(currentIndex);
+  });
+</script>
+
+
+
+  
+    
+    <!-- Footer -->
+    <footer style="font-family: Montserrat;background-color: #fff;">
+        <p style="color: #333;">With love, Sudhanshu ❤️</p>
+    </footer>
+
+</body>
+</html>
